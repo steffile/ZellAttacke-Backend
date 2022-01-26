@@ -1,0 +1,26 @@
+html {
+	font-size: 16px;
+}
+
+body {
+	max-width: 100%;
+	background-image: url("../pictures/immun.jpg");	
+	background-attachment: fixed;
+	font-family: 'Comic Sans MS', sans-serif;
+	color: white;
+}
+
+.container {
+	margin-top: 2em;
+}
+
+a,
+tbody {
+	color: white;
+}
+
+a:focus,
+a:hover,
+a:active {
+	color: rgba(254, 142, 140, 1);
+}
