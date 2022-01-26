@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <title>CellAttack - Bitte einloggen</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/styles/css.css" />
+	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+  </head>
+<body>
+  	<div class="container text-center">
+	  	<form th:action="@{/login}" th:object="${user}" method="post" style="max-width: 600px; margin: 0 auto;">
+	  		<h2>Bitte einloggen</h2>
+	  		<div class="m-3">
+		  		<div class="form-group row">
+		  			<label class="col-4 col-form-label">E-Mail: </label>
+		  			<div class="col-8">
+		  				<input type="email" th:field="*{email}" class="form-control" required />
+		  				</div>
+				</div>
+				
+		        <div class="form-group row">
+					<label class="col-4 col-form-label">Passwort: </label>
+					<div class="col-8">
+						<input type="password" th:field="*{password}" class="form-control" required minlength="6" maxlength="10"/>
+					</div>
+				</div>
+		
+				<div>
+		        	<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+		        </div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
